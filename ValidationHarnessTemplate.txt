@@ -1,0 +1,17 @@
+import org.junit.Assert;  
+import org.junit.Test;  
+import org.junit.runner.RunWith;  
+import org.powermock.api.mockito.PowerMockito;  
+import org.powermock.core.classloader.annotations.PrepareForTest;  
+import org.powermock.modules.junit4.PowerMockRunner;  
+import org.sosy_lab.sv_benchmarks.Verifier;
+
+@RunWith(PowerMockRunner.class) 
+public class ValidationHarness {
+  @Test
+  @PrepareForTest(Verifier.class)
+  public void testCallStaticMethod() {
+    PowerMockito.mockStatic(Verifier.class);
+    ClassName.main(new String[0]);
+   }
+}

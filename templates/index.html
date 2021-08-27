@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+<style> 
+    body{text-align:center} 
+</style> 
+</head>
+<body>
+    <font color="#660000" size=6>My JBMC Verification Tool</font><br/>
+    <br/><br/>
+    <form action="result" method="post" enctype="multipart/form-data">
+        <font color=blue size=5>Input .set file</font><br/><br/>
+        <input type="file" name="fileUpload" style="width:200px;height:30px"/><br/><br/>
+        <font color=blue size=5>Choose execution options</font><br/><br/>
+        <select name='options' style="width:240px;height:60px">
+            <option value ="Witness">Witness</option>
+            <option value ="JBMC">JBMC</option>
+            <option value="Both">Both</option>
+        </select><br/><br/>
+        <input type="submit" value="Execute" style="width:120px;height:60px"/><br/><br/>
+    </form>
+</body>
+</html>
